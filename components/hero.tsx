@@ -9,7 +9,7 @@ export function Hero() {
         <div className="relative w-48 h-48 rounded-full overflow-hidden border-2 border-primary mb-8 mt-4">
               <div className="absolute w-[200px] h-[240px] -top-1 left-1/2 -translate-x-1/2 relative">
                 <Image
-                  src="/profile.png"
+                  src="/profile.JPG"
                   alt="Mohammad Mahmud"
                   fill
                   className="object-cover"
