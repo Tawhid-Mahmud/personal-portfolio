@@ -6,12 +6,12 @@ import Image from "next/image"
 export function Projects() {
   return (
     <section id="projects" className="py-20 bg-background">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-4xl lg:max-w-6xl xl:max-w-7xl">
         <div className="flex flex-col items-center text-center space-y-4 mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Projects</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">My Projects</h2>
           <div className="w-20 h-1 bg-primary"></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           <ProjectCard
             title="E-commerce Website"
             description="A full-featured online store built with Next.js and integrated with Stripe for payments."
@@ -45,7 +45,7 @@ export function Projects() {
 function ProjectCard({ title, description, image, tags, demoLink, repoLink }) {
   return (
     <Card className="overflow-hidden transition-all duration-200 hover:shadow-md">
-      <div className="relative h-48 w-full overflow-hidden">
+      <div className="relative h-40 sm:h-48 w-full overflow-hidden">
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
@@ -54,7 +54,7 @@ function ProjectCard({ title, description, image, tags, demoLink, repoLink }) {
         />
       </div>
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className="text-lg sm:text-xl">{title}</CardTitle>
         <div className="flex flex-wrap gap-2 mt-2">
           {tags.map((tag, index) => (
             <span key={index} className="px-2 py-1 text-xs rounded-full bg-muted text-muted-foreground">
@@ -64,7 +64,7 @@ function ProjectCard({ title, description, image, tags, demoLink, repoLink }) {
         </div>
       </CardHeader>
       <CardContent>
-        <CardDescription>{description}</CardDescription>
+        <CardDescription className="text-sm sm:text-base">{description}</CardDescription>
       </CardContent>
       <CardFooter className="flex justify-between">
         <Button variant="outline" size="sm" asChild>
