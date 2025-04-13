@@ -1,4 +1,11 @@
-import { Code, Palette, Smartphone, Globe, Database, Server } from "lucide-react"
+import {
+  Search,
+  BarChart2,
+  PenToolIcon as Tool,
+  Brain,
+  Database,
+  PresentationIcon as PresentationChart,
+} from "lucide-react"
 
 export function Skills() {
   return (
@@ -10,34 +17,34 @@ export function Skills() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <SkillCard
-            icon={<Code className="w-10 h-10" />}
-            title="Frontend Development"
-            description="React, Next.js, HTML, CSS, JavaScript, TypeScript, Tailwind CSS"
+            icon={<Search className="w-10 h-10" />}
+            title="🔍 Data Analysis & Manipulation"
+            description="SQL, Excel, Pandas, NumPy, Google Sheets"
           />
           <SkillCard
-            icon={<Server className="w-10 h-10" />}
-            title="Backend Development"
-            description="Node.js, Express, RESTful APIs, GraphQL"
+            icon={<BarChart2 className="w-10 h-10" />}
+            title="📊 Data Visualization"
+            description="Tableau, Power BI, Matplotlib, Seaborn, Excel Charts"
+          />
+          <SkillCard
+            icon={<Tool className="w-10 h-10" />}
+            title="🛠 Tools & Platforms"
+            description="Jupyter Notebook, VS Code, Git, GitHub, Google Analytics"
+          />
+          <SkillCard
+            icon={<Brain className="w-10 h-10" />}
+            title="🧠 Statistical Analysis"
+            description="A/B Testing, Descriptive Statistics, Regression Analysis, Hypothesis Testing"
           />
           <SkillCard
             icon={<Database className="w-10 h-10" />}
-            title="Database"
-            description="MongoDB, PostgreSQL, MySQL, Firebase"
+            title="📦 Data Collection & Cleaning"
+            description="Web Scraping (BeautifulSoup, Selenium), Data Wrangling, API Integration"
           />
           <SkillCard
-            icon={<Palette className="w-10 h-10" />}
-            title="UI/UX Design"
-            description="Figma, Adobe XD, Responsive Design, Accessibility"
-          />
-          <SkillCard
-            icon={<Smartphone className="w-10 h-10" />}
-            title="Mobile Development"
-            description="React Native, Progressive Web Apps"
-          />
-          <SkillCard
-            icon={<Globe className="w-10 h-10" />}
-            title="Deployment & DevOps"
-            description="Vercel, Netlify, Git, GitHub Actions, CI/CD"
+            icon={<PresentationChart className="w-10 h-10" />}
+            title="🧪 Data Storytelling & Reporting"
+            description="Dashboard Design, KPI Tracking, Business Reporting, Data-Driven Presentations"
           />
         </div>
       </div>
